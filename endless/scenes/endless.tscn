@@ -65,11 +65,10 @@ tile_data = IntArray( 65543, 12, 65544, 10, 65545, 10, 65546, 10, 65547, 10, 655
 
 [node name="the_room" type="Node2D" parent="."]
 
+transform/pos = Vector2( 224, 32 )
 script/script = ExtResource( 3 )
 
-[node name="Node2D" parent="the_room" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 224, 32 )
+[node name="level" parent="the_room" instance=ExtResource( 4 )]
 
 [node name="door" parent="." instance=ExtResource( 5 )]
 

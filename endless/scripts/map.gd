@@ -5,3 +5,6 @@ func _ready():
 
 func level_complete():
 	get_parent().open_door()
+
+func level_not_complete():
+	get_parent().close_door()

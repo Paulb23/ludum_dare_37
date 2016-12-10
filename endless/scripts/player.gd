@@ -45,6 +45,11 @@ func _fixed_process(delta):
 			moving = false
 
 		if is_colliding():
-			move_to(startPos * 1)
+			var other = get_collider()
+			if other.has_method("push"):
+				other.push(direction)
+
+			#move_to(startPos * 1)
+			set_pos(startPos)
 			if get_pos() == startPos:
 				moving = false
