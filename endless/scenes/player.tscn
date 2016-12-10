@@ -23,18 +23,18 @@ offset = Vector2( 16, 16 )
 vframes = 6
 hframes = 8
 
-[node name="Node2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
 
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 16, 16 )
 shapes/0/trigger = false
-gravity_vec = Vector2( 0, 1 )
+gravity_vec = Vector2( 0, 0 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 
 transform/pos = Vector2( 16, 16 )
 shape = SubResource( 1 )

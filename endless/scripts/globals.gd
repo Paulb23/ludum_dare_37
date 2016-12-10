@@ -2,7 +2,7 @@ extends Node2D
 
 const screenWidth = 800
 const screenHeight = 600
-const tileSize = 16
+const tileSize = 32
 
 var currentScene = null
 
