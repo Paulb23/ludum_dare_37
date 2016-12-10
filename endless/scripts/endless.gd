@@ -6,6 +6,7 @@ var loading = false;
 func _ready():
 	set_fixed_process(true);
 	get_node("door").open();
+	get_node("edoor").close();
 	pass
 
 func _fixed_process(delta):
@@ -17,4 +18,10 @@ func load_next():
 	if not loading:
 		get_node("player").exited = true
 		get_node("door").close();
+		get_node("edoor").open();
+		loading = true
+
+func play_next():
+	if loading:
+		get_node("edoor").close();
 		loading = true

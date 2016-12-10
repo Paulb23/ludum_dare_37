@@ -1,12 +1,14 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://scripts/endless.gd" type="Script" id=1]
 [ext_resource path="res://tiles/tiles.tres" type="TileSet" id=2]
 [ext_resource path="res://scripts/map.gd" type="Script" id=3]
 [ext_resource path="res://scenes/levels/blank.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/props/exit_door.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scripts/exit_trigger.gd" type="Script" id=7]
+[ext_resource path="res://scenes/props/entrance_door.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scripts/exit_trigger.gd" type="Script" id=8]
+[ext_resource path="res://scripts/entrace_trigger.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -48,7 +50,11 @@ transform/pos = Vector2( 224, 32 )
 
 transform/pos = Vector2( 608, 64 )
 
-[node name="player" parent="." instance=ExtResource( 6 )]
+[node name="edoor" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 224, 512 )
+
+[node name="player" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 384, 352 )
 
@@ -63,11 +69,31 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 7 )
+script/script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit trigger"]
 
 transform/pos = Vector2( -13, 19 )
+shape = SubResource( 1 )
+trigger = true
+_update_shape_index = 0
+
+[node name="entrance trigger" type="Area2D" parent="."]
+
+transform/pos = Vector2( 637, 29 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -365, 500 )
+shapes/0/trigger = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entrance trigger"]
+
+transform/pos = Vector2( -365, 500 )
 shape = SubResource( 1 )
 trigger = true
 _update_shape_index = 0

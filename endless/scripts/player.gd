@@ -75,8 +75,9 @@ func move_player(direction):
 		actual_pos.x += Globals.get("TILE_SIZE")
 
 	var check_pos = actual_pos
-	if direction == MOVE_DOWN and not exited:
-		check_pos = Vector2(actual_pos.x, check_pos.y + 32)
+	if not exited:
+		if not direction == MOVE_UP:
+			check_pos = Vector2(actual_pos.x, check_pos.y + 32)
 
 	if is_tile_solid(get_tile_type(check_pos)):
 		moving = false
