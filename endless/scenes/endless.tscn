@@ -125,7 +125,7 @@ _update_shape_index = 0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-transform/pos = Vector2( 401, 304 )
+transform/pos = Vector2( 464, 304 )
 anchor_mode = 1
 rotating = false
 current = true

@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var moving = false
-var speed = 2
+var speed = 4
 
 var direction = Vector2(0,0)
 var startPos = Vector2(0,0)
