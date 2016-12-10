@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://scripts/levels/level_1/level_1.gd" type="Script" id=1]
+[ext_resource path="res://scripts/levels/level_3/level_3.gd" type="Script" id=1]
 [ext_resource path="res://tiles/tiles.tres" type="TileSet" id=2]
 [ext_resource path="res://art/button.png" type="Texture" id=3]
+[ext_resource path="res://scenes/props/light.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -54,5 +55,267 @@ transform/pos = Vector2( 368, 112 )
 shape = SubResource( 1 )
 trigger = true
 _update_shape_index = 0
+
+[node name="lights" type="Node2D" parent="."]
+
+[node name="light" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 208, 176 )
+
+[node name="light1" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 272, 176 )
+
+[node name="light2" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 336, 176 )
+
+[node name="light3" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 400, 176 )
+
+[node name="light4" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 400, 240 )
+
+[node name="light5" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 336, 240 )
+
+[node name="light6" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 272, 240 )
+
+[node name="light7" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 208, 240 )
+
+[node name="light8" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 208, 304 )
+
+[node name="light9" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 272, 304 )
+
+[node name="light10" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 336, 304 )
+
+[node name="light11" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 400, 304 )
+
+[node name="light12" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 400, 368 )
+
+[node name="light13" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 336, 368 )
+
+[node name="light14" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 272, 368 )
+
+[node name="light15" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 208, 368 )
+
+[node name="light17" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 208, 432 )
+
+[node name="light18" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 272, 432 )
+
+[node name="light19" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 336, 432 )
+
+[node name="light20" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 400, 432 )
+
+[node name="light21" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 144, 432 )
+
+[node name="light22" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 144, 368 )
+
+[node name="light23" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 144, 304 )
+
+[node name="light24" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 144, 240 )
+
+[node name="light25" parent="lights" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 144, 176 )
+
+[connection signal="toggled" from="lights/light" to="lights/light25" method="toggle"]
+
+[connection signal="toggled" from="lights/light" to="lights/light1" method="toggle"]
+
+[connection signal="toggled" from="lights/light" to="lights/light7" method="toggle"]
+
+[connection signal="toggled" from="lights/light1" to="lights/light6" method="toggle"]
+
+[connection signal="toggled" from="lights/light1" to="lights/light2" method="toggle"]
+
+[connection signal="toggled" from="lights/light1" to="lights/light" method="toggle"]
+
+[connection signal="toggled" from="lights/light2" to="lights/light5" method="toggle"]
+
+[connection signal="toggled" from="lights/light2" to="lights/light1" method="toggle"]
+
+[connection signal="toggled" from="lights/light2" to="lights/light3" method="toggle"]
+
+[connection signal="toggled" from="lights/light3" to="lights/light4" method="toggle"]
+
+[connection signal="toggled" from="lights/light3" to="lights/light2" method="toggle"]
+
+[connection signal="toggled" from="lights/light4" to="lights/light11" method="toggle"]
+
+[connection signal="toggled" from="lights/light4" to="lights/light5" method="toggle"]
+
+[connection signal="toggled" from="lights/light4" to="lights/light3" method="toggle"]
+
+[connection signal="toggled" from="lights/light5" to="lights/light4" method="toggle"]
+
+[connection signal="toggled" from="lights/light5" to="lights/light10" method="toggle"]
+
+[connection signal="toggled" from="lights/light5" to="lights/light6" method="toggle"]
+
+[connection signal="toggled" from="lights/light5" to="lights/light2" method="toggle"]
+
+[connection signal="toggled" from="lights/light6" to="lights/light5" method="toggle"]
+
+[connection signal="toggled" from="lights/light6" to="lights/light1" method="toggle"]
+
+[connection signal="toggled" from="lights/light6" to="lights/light7" method="toggle"]
+
+[connection signal="toggled" from="lights/light6" to="lights/light9" method="toggle"]
+
+[connection signal="toggled" from="lights/light7" to="lights/light6" method="toggle"]
+
+[connection signal="toggled" from="lights/light7" to="lights/light" method="toggle"]
+
+[connection signal="toggled" from="lights/light7" to="lights/light24" method="toggle"]
+
+[connection signal="toggled" from="lights/light7" to="lights/light8" method="toggle"]
+
+[connection signal="toggled" from="lights/light8" to="lights/light15" method="toggle"]
+
+[connection signal="toggled" from="lights/light8" to="lights/light7" method="toggle"]
+
+[connection signal="toggled" from="lights/light8" to="lights/light23" method="toggle"]
+
+[connection signal="toggled" from="lights/light8" to="lights/light9" method="toggle"]
+
+[connection signal="toggled" from="lights/light9" to="lights/light10" method="toggle"]
+
+[connection signal="toggled" from="lights/light9" to="lights/light14" method="toggle"]
+
+[connection signal="toggled" from="lights/light9" to="lights/light6" method="toggle"]
+
+[connection signal="toggled" from="lights/light9" to="lights/light8" method="toggle"]
+
+[connection signal="toggled" from="lights/light10" to="lights/light11" method="toggle"]
+
+[connection signal="toggled" from="lights/light10" to="lights/light13" method="toggle"]
+
+[connection signal="toggled" from="lights/light10" to="lights/light5" method="toggle"]
+
+[connection signal="toggled" from="lights/light10" to="lights/light9" method="toggle"]
+
+[connection signal="toggled" from="lights/light11" to="lights/light4" method="toggle"]
+
+[connection signal="toggled" from="lights/light11" to="lights/light10" method="toggle"]
+
+[connection signal="toggled" from="lights/light11" to="lights/light12" method="toggle"]
+
+[connection signal="toggled" from="lights/light12" to="lights/light11" method="toggle"]
+
+[connection signal="toggled" from="lights/light12" to="lights/light13" method="toggle"]
+
+[connection signal="toggled" from="lights/light12" to="lights/light20" method="toggle"]
+
+[connection signal="toggled" from="lights/light13" to="lights/light10" method="toggle"]
+
+[connection signal="toggled" from="lights/light13" to="lights/light14" method="toggle"]
+
+[connection signal="toggled" from="lights/light13" to="lights/light19" method="toggle"]
+
+[connection signal="toggled" from="lights/light13" to="lights/light12" method="toggle"]
+
+[connection signal="toggled" from="lights/light14" to="lights/light15" method="toggle"]
+
+[connection signal="toggled" from="lights/light14" to="lights/light18" method="toggle"]
+
+[connection signal="toggled" from="lights/light14" to="lights/light13" method="toggle"]
+
+[connection signal="toggled" from="lights/light14" to="lights/light9" method="toggle"]
+
+[connection signal="toggled" from="lights/light15" to="lights/light14" method="toggle"]
+
+[connection signal="toggled" from="lights/light15" to="lights/light17" method="toggle"]
+
+[connection signal="toggled" from="lights/light15" to="lights/light8" method="toggle"]
+
+[connection signal="toggled" from="lights/light15" to="lights/light22" method="toggle"]
+
+[connection signal="toggled" from="lights/light17" to="lights/light21" method="toggle"]
+
+[connection signal="toggled" from="lights/light17" to="lights/light15" method="toggle"]
+
+[connection signal="toggled" from="lights/light17" to="lights/light18" method="toggle"]
+
+[connection signal="toggled" from="lights/light18" to="lights/light14" method="toggle"]
+
+[connection signal="toggled" from="lights/light18" to="lights/light19" method="toggle"]
+
+[connection signal="toggled" from="lights/light18" to="lights/light17" method="toggle"]
+
+[connection signal="toggled" from="lights/light19" to="lights/light18" method="toggle"]
+
+[connection signal="toggled" from="lights/light19" to="lights/light13" method="toggle"]
+
+[connection signal="toggled" from="lights/light19" to="lights/light20" method="toggle"]
+
+[connection signal="toggled" from="lights/light20" to="lights/light19" method="toggle"]
+
+[connection signal="toggled" from="lights/light20" to="lights/light12" method="toggle"]
+
+[connection signal="toggled" from="lights/light21" to="lights/light17" method="toggle"]
+
+[connection signal="toggled" from="lights/light21" to="lights/light22" method="toggle"]
+
+[connection signal="toggled" from="lights/light22" to="lights/light21" method="toggle"]
+
+[connection signal="toggled" from="lights/light22" to="lights/light15" method="toggle"]
+
+[connection signal="toggled" from="lights/light22" to="lights/light23" method="toggle"]
+
+[connection signal="toggled" from="lights/light23" to="lights/light24" method="toggle"]
+
+[connection signal="toggled" from="lights/light23" to="lights/light8" method="toggle"]
+
+[connection signal="toggled" from="lights/light23" to="lights/light22" method="toggle"]
+
+[connection signal="toggled" from="lights/light24" to="lights/light25" method="toggle"]
+
+[connection signal="toggled" from="lights/light24" to="lights/light7" method="toggle"]
+
+[connection signal="toggled" from="lights/light24" to="lights/light23" method="toggle"]
+
+[connection signal="toggled" from="lights/light25" to="lights/light" method="toggle"]
+
+[connection signal="toggled" from="lights/light25" to="lights/light24" method="toggle"]
 
 
