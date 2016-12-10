@@ -80,7 +80,7 @@ transform/pos = Vector2( 224, 512 )
 
 [node name="player" parent="." instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 384, 352 )
+transform/pos = Vector2( 320, 480 )
 
 [node name="exit trigger" type="Area2D" parent="."]
 

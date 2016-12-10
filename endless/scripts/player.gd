@@ -53,3 +53,7 @@ func _fixed_process(delta):
 			set_pos(startPos)
 			if get_pos() == startPos:
 				moving = false
+
+func _input(event):
+	if event.is_action("reload") and !event.is_pressed() and !event.is_echo():
+		get_parent().reload()

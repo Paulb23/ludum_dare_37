@@ -6,6 +6,8 @@ var levels = [
 	preload("res://scenes/levels/level_3.tscn")
 ]
 
+var player_start = Vector2(288, 480)
+
 var level = 1;
 var start_game = true
 var loading = false;
@@ -15,7 +17,7 @@ func _ready():
 	set_fixed_process(true);
 	get_node("door").close();
 	get_node("edoor").close();
-	load_next()
+	reload()
 	play_next()
 	pass
 
@@ -37,6 +39,14 @@ func play_next():
 		get_node("edoor").close();
 		loading = false
 		playing = true
+
+func reload():
+	get_node("the_room/level").free()
+	get_node("the_room").add_child(levels[level].instance())
+	get_node("door").close();
+	get_node("edoor").open();
+	get_node("player").moving = false;
+	get_node("player").set_pos(player_start);
 
 func open_door():
 	get_node("door").open()
