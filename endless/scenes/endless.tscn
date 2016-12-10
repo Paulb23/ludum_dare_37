@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://tiles/tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/levels/blank.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/props/exit_door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=4]
+
+[node name="endless" type="Node2D"]
+
+[node name="walkway" type="TileMap" parent="."]
+
+transform/pos = Vector2( -32, 0 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell/size = Vector2( 32, 32 )
+cell/quadrant_size = 32
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = false
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 65539, 8, 65540, 6, 65541, 6, 65542, 6, 65543, 6, 65544, 6, 65545, 6, 65546, 6, 65547, 6, 65548, 6, 65549, 6, 65550, 6, 65551, 6, 65552, 6, 65553, 6, 65554, 6, 65555, 6, 65556, 10, 131075, 7, 131092, 7, 196611, 7, 196628, 7, 262147, 7, 262164, 7, 327683, 7, 393219, 7, 458755, 7, 524291, 7, 589827, 7, 655363, 7, 720899, 7, 786435, 7, 786454, 5, 851971, 7, 917507, 7, 983043, 7, 983054, 7, 1048579, 9, 1048580, 6, 1048581, 6, 1048582, 6, 1048583, 6, 1048584, 6, 1048642, 6, 1310697, 6 )
+
+[node name="the_room" type="Node2D" parent="."]
+
+transform/pos = Vector2( 224, 32 )
+
+[node name="Node2D" parent="the_room" instance=ExtResource( 2 )]
+
+[node name="door" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 608, 64 )
+
+[node name="player" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 416, 320 )
+
+
