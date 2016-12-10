@@ -18,6 +18,8 @@ func _ready():
 func _fixed_process(delta):
 
 	if !moving:
+		get_node("AnimationPlayer").play("idle")
+
 		var resultUp = world.intersect_point(get_pos() + Vector2(0, -GRID))
 		var resultDown = world.intersect_point(get_pos() + Vector2(0, GRID))
 		var resultLeft = world.intersect_point(get_pos() + Vector2(-GRID, 0))
@@ -27,18 +29,22 @@ func _fixed_process(delta):
 				moving = true
 				direction = Vector2(0, -1)
 				startPos = get_pos()
+				get_node("AnimationPlayer").play("walk_up")
 		elif Input.is_action_pressed("down") and resultDown.empty():
 				moving = true
 				direction = Vector2(0, 1)
 				startPos = get_pos()
+				get_node("AnimationPlayer").play("walk_down")
 		elif Input.is_action_pressed("left") and resultLeft.empty():
 				moving = true
 				direction = Vector2(-1, 0)
 				startPos = get_pos()
+				get_node("AnimationPlayer").play("walk_left")
 		elif Input.is_action_pressed("right") and resultRight.empty():
 				moving = true
 				direction = Vector2(1, 0)
 				startPos = get_pos()
+				get_node("AnimationPlayer").play("walk_right")
 	else:
 		move_to(get_pos() + direction * speed)
 		if get_pos() == startPos + Vector2(GRID * direction.x, GRID * direction.y):

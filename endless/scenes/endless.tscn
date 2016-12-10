@@ -122,26 +122,6 @@ shape = SubResource( 1 )
 trigger = true
 _update_shape_index = 0
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
-transform/pos = Vector2( 464, 304 )
-anchor_mode = 1
-rotating = false
-current = true
-zoom = Vector2( 1, 1 )
-limit/left = -10000000
-limit/top = -10000000
-limit/right = 10000000
-limit/bottom = 10000000
-drag_margin/h_enabled = true
-drag_margin/v_enabled = true
-smoothing/enable = false
-smoothing/speed = 5.0
-drag_margin/left = 0.2
-drag_margin/top = 0.2
-drag_margin/right = 0.2
-drag_margin/bottom = 0.2
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 input/pickable = false
@@ -174,5 +154,25 @@ build_mode = 0
 polygon = Vector2Array( 641.832, 64.0808, 641.832, 31.3948, 192.776, 31.6304, 192.484, 544.484, 257.289, 544.39, 257, 576, 161, 576, 161, 0, 673, 0, 673, 64, 641, 64 )
 shape_range = Vector2( 0, 4 )
 trigger = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+transform/pos = Vector2( 450.055, 307.92 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
 
 
