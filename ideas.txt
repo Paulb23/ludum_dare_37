@@ -4,3 +4,95 @@
 |						 |
 ===================================================
 
+
++++++++++
+
+THEME: One Room.
+
++++++++++
+
+GOAL: Keep is Simple!
+	Possible levels over infinate.
+
+
+Escape the room click adventure.
+	- to obvious / common.
+
+Small player in a giant room / miniture figures.
+	- to obvious / common.
+	- should do somthing with this
+
+Tower defence in a single room.
+
+This is the only level but This is the only room.
+
+Top down shooter in a room.
+
+Sneak across a room.
+
+Dark room that changes behind you / as you move around.
+
+SNAKE!
+TOP DOWN COLLECT  LIKE GAME!
+
+Platform around the room to build a handglider to escape the room.
+	What classes as a room?
+		- a part or division of a building enclosed by walls, floor, and ceiling.
+
+	- Taken hostage by room gremlins
+	- Side on platformer.
+	- Level based.
+
+	- Attacks
+		- Jump to kill uness they have helmet
+		- 
+
+	- Enemies
+		- Flying Books
+		- Gremlins
+
+============
+
+NAME: Endless
+
+============
+
+
+Map:
+	xxxxxxxxxxxxxxxxx
+        x		x
+	x     ----------- -------
+	x     |			|
+	x     |			|
+	x     |			|
+	x     |			|
+	x     |			|
+	x     |			|
+	x     |_ _______________|
+	x	x
+	xxxxxxxxx
+
+	X = walkway
+	|-_ = walls
+
+Top down / isometric
+Complete puzzles to exit the room
+Puzzles get progressivly harder.
+
+Wake up in the room dazed
+Then keep looping around until *i ran out of levels* then you get frozen and a claw takes you away.
+We then see many rooms like this one?
+
+
+Door closes when exiting the room.
+
+Decisions:
+	Camrea view:
+	Grid Movment: 
+	Puzzles:
+
+Play on words: 
+	Make it to that one room
+	One room that one one enters
+	The one mystery room.
+	The one room that no one can enter -- sword in the stone 
