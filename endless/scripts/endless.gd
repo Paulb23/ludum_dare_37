@@ -41,12 +41,13 @@ func play_next():
 		playing = true
 
 func reload():
-	get_node("the_room/level").free()
-	get_node("the_room").add_child(levels[level].instance())
-	get_node("door").close();
-	get_node("edoor").open();
-	get_node("player").moving = false;
-	get_node("player").set_pos(player_start);
+	if playing:
+		get_node("the_room/level").free()
+		get_node("the_room").add_child(levels[level].instance())
+		get_node("door").close();
+		get_node("edoor").open();
+		get_node("player").moving = false;
+		get_node("player").set_pos(player_start);
 
 func open_door():
 	get_node("door").open()
