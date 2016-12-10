@@ -11,12 +11,10 @@ func _ready():
 
 func _fixed_process(delta):
 	if start_game:
-		get_node("player").reset = true
 		start_game = false;
 
 func load_next():
 	if not loading:
-		get_node("player").exited = true
 		get_node("door").close();
 		get_node("edoor").open();
 		loading = true

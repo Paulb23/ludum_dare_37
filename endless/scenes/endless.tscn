@@ -60,10 +60,10 @@ transform/pos = Vector2( 384, 352 )
 
 [node name="exit trigger" type="Area2D" parent="."]
 
-transform/pos = Vector2( 637, 29 )
+transform/pos = Vector2( 605, 29 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, -13, 19 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -45, 19 )
 shapes/0/trigger = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -73,7 +73,7 @@ script/script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="exit trigger"]
 
-transform/pos = Vector2( -13, 19 )
+transform/pos = Vector2( -45, 19 )
 shape = SubResource( 1 )
 trigger = true
 _update_shape_index = 0
@@ -97,5 +97,25 @@ transform/pos = Vector2( -365, 500 )
 shape = SubResource( 1 )
 trigger = true
 _update_shape_index = 0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+transform/pos = Vector2( 401, 304 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
 
 
