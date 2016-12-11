@@ -31,6 +31,7 @@ func body_enter(body):
 	var lights = get_node("lights")
 	for l in lights.get_children():
 		if l.on:
+			get_node("SamplePlayer").play("button_fail");
 			return
 	get_parent().level_complete()
 	get_node("button").set_frame(1)
