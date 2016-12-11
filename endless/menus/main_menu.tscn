@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=1]
+[gd_scene load_steps=17 format=1]
 
 [ext_resource path="res://scripts/menus/main_menu.gd" type="Script" id=1]
 [ext_resource path="res://art/main_background.png" type="Texture" id=2]
 [ext_resource path="res://fonts/AldotheApache.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://audio/theme.ogg" type="AudioStream" id=4]
 [ext_resource path="res://audio/menu_click.wav" type="Sample" id=5]
+[ext_resource path="res://fonts/monofonto.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -66,6 +67,13 @@ font/font = ExtResource( 3 )
 
 samples/menu_click = { "db":0.0, "pitch":1.0, "sample":ExtResource( 5 ) }
 
+[sub_resource type="DynamicFont" id=13]
+
+font/size = 18
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 6 )
+
 [node name="Node2D" type="Node2D"]
 
 script/script = ExtResource( 1 )
@@ -125,9 +133,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 352.0
-margin/top = 352.0
+margin/top = 337.0
 margin/right = 453.0
-margin/bottom = 399.0
+margin/bottom = 384.0
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 10 )
@@ -188,5 +196,81 @@ default/filter/gain = 1.0
 default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
+
+[node name="music_vol" type="HSlider" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 352.0
+margin/top = 448.0
+margin/right = 452.0
+margin/bottom = 464.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 1.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="sfx_vol" type="HSlider" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 352.0
+margin/top = 505.0
+margin/right = 452.0
+margin/bottom = 521.0
+range/min = 0.0
+range/max = 1.0
+range/step = 0.1
+range/page = 0.0
+range/value = 1.0
+range/exp_edit = false
+range/rounded = false
+tick_count = 0
+ticks_on_borders = true
+focus_mode = 2
+
+[node name="music" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 349.0
+margin/top = 427.0
+margin/right = 493.0
+margin/bottom = 456.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Music Volume"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="sfx" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 341.0
+margin/top = 484.0
+margin/right = 485.0
+margin/bottom = 513.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Effects Volume"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 
