@@ -233,6 +233,23 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="instr" type="Label" parent="story"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -160.0
+margin/top = 217.0
+margin/right = 20.0
+margin/bottom = 250.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Click to continue..."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="StreamPlayer" type="StreamPlayer" parent="."]
 
 stream/stream = ExtResource( 15 )
