@@ -211,21 +211,21 @@ default/chorus_send = 0.0
 
 [connection signal="toggled" from="lights/light" to="lights/light7" method="toggle"]
 
+[connection signal="toggled" from="lights/light1" to="lights/light6" method="toggle"]
+
 [connection signal="toggled" from="lights/light1" to="lights/light" method="toggle"]
 
 [connection signal="toggled" from="lights/light1" to="lights/light2" method="toggle"]
 
-[connection signal="toggled" from="lights/light1" to="lights/light6" method="toggle"]
+[connection signal="toggled" from="lights/light2" to="lights/light5" method="toggle"]
 
 [connection signal="toggled" from="lights/light2" to="lights/light1" method="toggle"]
 
-[connection signal="toggled" from="lights/light2" to="lights/light5" method="toggle"]
-
 [connection signal="toggled" from="lights/light2" to="lights/light3" method="toggle"]
 
-[connection signal="toggled" from="lights/light3" to="lights/light2" method="toggle"]
-
 [connection signal="toggled" from="lights/light3" to="lights/light4" method="toggle"]
+
+[connection signal="toggled" from="lights/light3" to="lights/light2" method="toggle"]
 
 [connection signal="toggled" from="lights/light4" to="lights/light5" method="toggle"]
 
@@ -233,45 +233,47 @@ default/chorus_send = 0.0
 
 [connection signal="toggled" from="lights/light4" to="lights/light3" method="toggle"]
 
-[connection signal="toggled" from="lights/light5" to="lights/light2" method="toggle"]
+[connection signal="toggled" from="lights/light5" to="lights/light4" method="toggle"]
 
 [connection signal="toggled" from="lights/light5" to="lights/light10" method="toggle"]
 
 [connection signal="toggled" from="lights/light5" to="lights/light6" method="toggle"]
 
-[connection signal="toggled" from="lights/light5" to="lights/light4" method="toggle"]
-
-[connection signal="toggled" from="lights/light6" to="lights/light1" method="toggle"]
-
-[connection signal="toggled" from="lights/light6" to="lights/light5" method="toggle"]
+[connection signal="toggled" from="lights/light5" to="lights/light2" method="toggle"]
 
 [connection signal="toggled" from="lights/light6" to="lights/light9" method="toggle"]
 
-[connection signal="toggled" from="lights/light6" to="lights/light7" method="toggle"]
+[connection signal="toggled" from="lights/light6" to="lights/light5" method="toggle"]
 
-[connection signal="toggled" from="lights/light7" to="lights/light" method="toggle"]
+[connection signal="toggled" from="lights/light6" to="lights/light1" method="toggle"]
+
+[connection signal="toggled" from="lights/light6" to="lights/light7" method="toggle"]
 
 [connection signal="toggled" from="lights/light7" to="lights/light6" method="toggle"]
 
-[connection signal="toggled" from="lights/light7" to="lights/light24" method="toggle"]
+[connection signal="toggled" from="lights/light7" to="lights/light" method="toggle"]
 
 [connection signal="toggled" from="lights/light7" to="lights/light8" method="toggle"]
 
-[connection signal="toggled" from="lights/light8" to="lights/light23" method="toggle"]
-
-[connection signal="toggled" from="lights/light8" to="lights/light15" method="toggle"]
+[connection signal="toggled" from="lights/light7" to="lights/light24" method="toggle"]
 
 [connection signal="toggled" from="lights/light8" to="lights/light9" method="toggle"]
 
 [connection signal="toggled" from="lights/light8" to="lights/light7" method="toggle"]
 
+[connection signal="toggled" from="lights/light8" to="lights/light23" method="toggle"]
+
+[connection signal="toggled" from="lights/light8" to="lights/light15" method="toggle"]
+
+[connection signal="toggled" from="lights/light9" to="lights/light14" method="toggle"]
+
 [connection signal="toggled" from="lights/light9" to="lights/light10" method="toggle"]
 
 [connection signal="toggled" from="lights/light9" to="lights/light6" method="toggle"]
 
-[connection signal="toggled" from="lights/light9" to="lights/light14" method="toggle"]
-
 [connection signal="toggled" from="lights/light9" to="lights/light8" method="toggle"]
+
+[connection signal="toggled" from="lights/light10" to="lights/light9" method="toggle"]
 
 [connection signal="toggled" from="lights/light10" to="lights/light13" method="toggle"]
 
@@ -279,39 +281,37 @@ default/chorus_send = 0.0
 
 [connection signal="toggled" from="lights/light10" to="lights/light11" method="toggle"]
 
-[connection signal="toggled" from="lights/light10" to="lights/light9" method="toggle"]
+[connection signal="toggled" from="lights/light11" to="lights/light4" method="toggle"]
 
 [connection signal="toggled" from="lights/light11" to="lights/light10" method="toggle"]
-
-[connection signal="toggled" from="lights/light11" to="lights/light4" method="toggle"]
 
 [connection signal="toggled" from="lights/light11" to="lights/light12" method="toggle"]
 
 [connection signal="toggled" from="lights/light12" to="lights/light13" method="toggle"]
 
-[connection signal="toggled" from="lights/light12" to="lights/light11" method="toggle"]
-
 [connection signal="toggled" from="lights/light12" to="lights/light20" method="toggle"]
 
-[connection signal="toggled" from="lights/light13" to="lights/light10" method="toggle"]
+[connection signal="toggled" from="lights/light12" to="lights/light11" method="toggle"]
 
 [connection signal="toggled" from="lights/light13" to="lights/light14" method="toggle"]
 
-[connection signal="toggled" from="lights/light13" to="lights/light12" method="toggle"]
+[connection signal="toggled" from="lights/light13" to="lights/light10" method="toggle"]
 
 [connection signal="toggled" from="lights/light13" to="lights/light19" method="toggle"]
 
-[connection signal="toggled" from="lights/light14" to="lights/light13" method="toggle"]
-
-[connection signal="toggled" from="lights/light14" to="lights/light15" method="toggle"]
+[connection signal="toggled" from="lights/light13" to="lights/light12" method="toggle"]
 
 [connection signal="toggled" from="lights/light14" to="lights/light9" method="toggle"]
 
+[connection signal="toggled" from="lights/light14" to="lights/light13" method="toggle"]
+
 [connection signal="toggled" from="lights/light14" to="lights/light18" method="toggle"]
 
-[connection signal="toggled" from="lights/light15" to="lights/light22" method="toggle"]
+[connection signal="toggled" from="lights/light14" to="lights/light15" method="toggle"]
 
 [connection signal="toggled" from="lights/light15" to="lights/light14" method="toggle"]
+
+[connection signal="toggled" from="lights/light15" to="lights/light22" method="toggle"]
 
 [connection signal="toggled" from="lights/light15" to="lights/light17" method="toggle"]
 
@@ -319,25 +319,25 @@ default/chorus_send = 0.0
 
 [connection signal="toggled" from="lights/light17" to="lights/light21" method="toggle"]
 
-[connection signal="toggled" from="lights/light17" to="lights/light15" method="toggle"]
-
 [connection signal="toggled" from="lights/light17" to="lights/light18" method="toggle"]
+
+[connection signal="toggled" from="lights/light17" to="lights/light15" method="toggle"]
 
 [connection signal="toggled" from="lights/light18" to="lights/light14" method="toggle"]
 
-[connection signal="toggled" from="lights/light18" to="lights/light17" method="toggle"]
-
 [connection signal="toggled" from="lights/light18" to="lights/light19" method="toggle"]
+
+[connection signal="toggled" from="lights/light18" to="lights/light17" method="toggle"]
 
 [connection signal="toggled" from="lights/light19" to="lights/light13" method="toggle"]
 
-[connection signal="toggled" from="lights/light19" to="lights/light18" method="toggle"]
-
 [connection signal="toggled" from="lights/light19" to="lights/light20" method="toggle"]
 
-[connection signal="toggled" from="lights/light20" to="lights/light12" method="toggle"]
+[connection signal="toggled" from="lights/light19" to="lights/light18" method="toggle"]
 
 [connection signal="toggled" from="lights/light20" to="lights/light19" method="toggle"]
+
+[connection signal="toggled" from="lights/light20" to="lights/light12" method="toggle"]
 
 [connection signal="toggled" from="lights/light21" to="lights/light22" method="toggle"]
 
@@ -351,15 +351,15 @@ default/chorus_send = 0.0
 
 [connection signal="toggled" from="lights/light23" to="lights/light22" method="toggle"]
 
-[connection signal="toggled" from="lights/light23" to="lights/light24" method="toggle"]
-
 [connection signal="toggled" from="lights/light23" to="lights/light8" method="toggle"]
 
-[connection signal="toggled" from="lights/light24" to="lights/light23" method="toggle"]
+[connection signal="toggled" from="lights/light23" to="lights/light24" method="toggle"]
 
 [connection signal="toggled" from="lights/light24" to="lights/light25" method="toggle"]
 
 [connection signal="toggled" from="lights/light24" to="lights/light7" method="toggle"]
+
+[connection signal="toggled" from="lights/light24" to="lights/light23" method="toggle"]
 
 [connection signal="toggled" from="lights/light25" to="lights/light" method="toggle"]
 

@@ -4,6 +4,7 @@ func _ready():
 	pass
 
 func level_complete():
+	get_node("SamplePlayer").play("level_complete")
 	get_parent().open_door()
 
 func level_not_complete():

@@ -9,7 +9,7 @@ var levels = [
 
 var player_start = Vector2(288, 480)
 
-var level = 2;
+var level = 0;
 var start_game = false
 var start_ending = false
 var loading = false;
@@ -51,6 +51,7 @@ func load_next():
 		if level >= levels.size():
 			get_node("door").close();
 			get_node("edoor").open();
+			get_node("the_room/SamplePlayer").play("level_load")
 			get_node("the_room/level").free()
 			get_node("the_room").add_child(levels[0].instance())
 			get_node("door").close();
@@ -59,6 +60,7 @@ func load_next():
 			playing = false
 			return
 
+		get_node("the_room/SamplePlayer").play("level_load")
 		get_node("the_room/level").free()
 		get_node("the_room").add_child(levels[level].instance())
 		get_node("door").close();

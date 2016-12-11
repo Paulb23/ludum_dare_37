@@ -13,6 +13,7 @@ func body_enter(body):
 	toggle()
 
 func toggle():
+	get_node("SamplePlayer").play("light")
 	if on :
 		get_node("Sprite").set_frame(0)
 		on = false

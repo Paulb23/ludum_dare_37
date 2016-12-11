@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=15 format=1]
 
 [ext_resource path="res://scripts/menus/main_menu.gd" type="Script" id=1]
 [ext_resource path="res://art/main_background.png" type="Texture" id=2]
 [ext_resource path="res://fonts/AldotheApache.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://audio/theme.ogg" type="AudioStream" id=4]
+[ext_resource path="res://audio/menu_click.wav" type="Sample" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -60,6 +61,10 @@ font/size = 20
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 3 )
+
+[sub_resource type="SampleLibrary" id=12]
+
+samples/menu_click = { "db":0.0, "pitch":1.0, "sample":ExtResource( 5 ) }
 
 [node name="Node2D" type="Node2D"]
 
@@ -166,5 +171,22 @@ stream/autoplay = true
 stream/paused = false
 stream/loop_restart_time = 0.0
 stream/buffering_ms = 500
+
+[node name="SamplePlayer" type="SamplePlayer" parent="."]
+
+config/polyphony = 1
+config/samples = SubResource( 12 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
 
 

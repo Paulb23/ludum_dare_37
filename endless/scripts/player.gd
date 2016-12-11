@@ -50,6 +50,8 @@ func _fixed_process(delta):
 				startPos = get_pos()
 				get_node("AnimationPlayer").play("walk_right")
 	else:
+		if not get_node("SamplePlayer").is_active() and get_parent().start_game and not get_parent().start_ending:
+			get_node("SamplePlayer").play("movment")
 		move_to(get_pos() + direction * speed)
 		if get_pos() == startPos + Vector2(GRID * direction.x, GRID * direction.y):
 			moving = false

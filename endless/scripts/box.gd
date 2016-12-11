@@ -40,6 +40,7 @@ func push(dir):
 	else:
 		return
 
+	get_node("SamplePlayer").play("box_push")
 	moving = true
 	direction = dir
 	startPos = get_pos()
