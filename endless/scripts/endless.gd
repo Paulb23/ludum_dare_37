@@ -3,7 +3,8 @@ extends Node2D
 var levels = [
 	preload("res://scenes/levels/blank.tscn"),
 	preload("res://scenes/levels/level_2.tscn"),
-	preload("res://scenes/levels/level_3.tscn")
+	preload("res://scenes/levels/level_3.tscn"),
+	preload("res://scenes/levels/blank.tscn")
 ]
 
 var player_start = Vector2(288, 480)
@@ -73,7 +74,7 @@ func play_next():
 
 		if level >= levels.size():
 			get_node("Camera2D").set_zoom(Vector2(0.5,0.5))
-			get_node("Camera2D").set_pos(Vector2(332.730469,524.029602))
+			get_node("Camera2D").set_pos(Vector2(250,550))
 			get_node("player").moving = false
 			start_ending = true;
 

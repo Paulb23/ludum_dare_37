@@ -20,8 +20,9 @@ func _fixed_process(delta):
 		if opening_part ==1:
 			get_node("text").set_text("How..do I get..out of here!...")
 		if opening_part == 2:
-			get_parent().opening_finshed()
 			opening_part = 0
+			show_opening = false
+			get_parent().opening_finshed()
 	if show_ending:
 		if ending_part == 0:
 			get_node("text").set_text("Wait...It can't be!")
@@ -30,8 +31,9 @@ func _fixed_process(delta):
 		if ending_part == 3:
 			get_node("text").set_text("How did i miss it!")
 		if ending_part == 4:
-			get_parent().ending_finished()
 			ending_part = 0
+			show_ending = false
+			get_parent().ending_finished()
 
 func _input(event):
 	if show_opening:
