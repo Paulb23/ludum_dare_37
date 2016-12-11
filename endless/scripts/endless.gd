@@ -5,7 +5,6 @@ var levels = [
 	preload("res://scenes/levels/level_2.tscn"),
 	preload("res://scenes/levels/level_4.tscn"),
 	preload("res://scenes/levels/level_3.tscn"),
-	preload("res://scenes/levels/blank.tscn")
 ]
 
 var player_start = Vector2(288, 480)
@@ -38,7 +37,11 @@ func _fixed_process(delta):
 		get_node("story").show_ending()
 
 func ending_finished():
-	get_node("/root/globals").set_scene("res://menus/fin.tscn")
+	get_node("Camera2D").set_zoom(Vector2(1,1))
+	get_node("Camera2D").set_pos(Vector2(480,245))
+	#get_node("Camera2D").set_pos(Vector2(0,0))
+	var fin = load("res://menus/fin.tscn").instance()
+	add_child(fin)
 
 func opening_finshed():
 	get_node("story").hide()
