@@ -23,7 +23,6 @@ func _fixed_process(delta):
 		if get_pos() == startPos + Vector2(GRID * direction.x, GRID * direction.y):
 			moving = false
 
-
 	if not moving and slide_mode and not_hit:
 		push(direction)
 

@@ -7,8 +7,8 @@ func _ready():
 	get_node("Area2D").connect("body_exit", self, "collision_end")
 	get_node("Area2D").connect("area_enter", self, "button_pressed")
 	get_node("Area2D").connect("area_exit", self, "button_pressed")
-	get_node("box").startPos = Vector2(32,256)
-	get_node("box").set_pos(Vector2(32,256))
+	get_node("box").startPos = Vector2(288+160,352-32)
+	get_node("box").set_pos(Vector2(288+160,352-32))
 	get_node("box").set_slide_mode()
 	player_pushed = false
 

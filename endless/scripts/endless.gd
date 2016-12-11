@@ -10,7 +10,7 @@ var levels = [
 
 var player_start = Vector2(288, 480)
 
-var level = 2;
+var level = 0;
 var start_game = false
 var start_ending = false
 var loading = false;

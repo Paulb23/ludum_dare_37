@@ -7,6 +7,8 @@ func _ready():
 	get_node("Area2D").connect("body_exit", self, "collision_end")
 	get_node("Area2D").connect("area_enter", self, "button_pressed")
 	get_node("Area2D").connect("area_exit", self, "button_pressed")
+	get_node("box").startPos = Vector2(256+160,96-32)
+	get_node("box").set_pos(Vector2(256+160,96-32))
 	player_pushed = false
 
 func button_pressed(body):
