@@ -9,7 +9,7 @@ var levels = [
 var player_start = Vector2(288, 480)
 
 var level = 0;
-var start_game = true
+var start_game = false
 var loading = false;
 var playing = true
 
@@ -22,7 +22,17 @@ func _ready():
 	pass
 
 func _fixed_process(delta):
-	pass
+	if start_game == false:
+		get_node("player").canMove = false
+		get_node("story").show()
+		get_node("story").show_opening()
+
+func opening_finshed():
+	get_node("story").hide()
+	start_game = true;
+	get_node("Camera2D").set_zoom(Vector2(1,1))
+	get_node("Camera2D").set_pos(Vector2(550,240))
+	get_node("player").canMove = true
 
 func load_next():
 	if not loading:

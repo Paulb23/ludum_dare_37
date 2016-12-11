@@ -13,11 +13,12 @@ func _ready():
 	set_fixed_process(true)
 	set_process_input(true)
 	world = get_parent().get_world_2d().get_direct_space_state()
+	get_node("AnimationPlayer").play("idle")
 	pass
 
 func _fixed_process(delta):
 
-	if !moving:
+	if !moving and canMove:
 		get_node("AnimationPlayer").play("idle")
 
 		var resultUp = world.intersect_point(get_pos() + Vector2(0, -GRID))
