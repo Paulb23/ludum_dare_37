@@ -2,6 +2,8 @@ extends StaticBody2D
 
 var moving = false
 var speed = 4
+var slide_mode = false
+var not_hit = false
 
 var direction = Vector2(0,0)
 var startPos = Vector2(0,0)
@@ -20,6 +22,10 @@ func _fixed_process(delta):
 		set_pos(get_pos() + direction * speed)
 		if get_pos() == startPos + Vector2(GRID * direction.x, GRID * direction.y):
 			moving = false
+
+
+	if not moving and slide_mode and not_hit:
+		push(direction)
 
 func push(dir):
 	if moving:
@@ -42,12 +48,17 @@ func push(dir):
 
 	get_node("SamplePlayer").play("box_push")
 	moving = true
+	not_hit = true
 	direction = dir
 	startPos = get_pos()
 
 func body_entered(body):
 	if body.get_name() == "player":
 		return
+	not_hit = false
 	set_pos(startPos)
 	if get_pos() == startPos:
 		moving = false
+
+func set_slide_mode():
+	slide_mode = true

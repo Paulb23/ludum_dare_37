@@ -3,13 +3,14 @@ extends Node2D
 var levels = [
 	preload("res://scenes/levels/blank.tscn"),
 	preload("res://scenes/levels/level_2.tscn"),
+	preload("res://scenes/levels/level_4.tscn"),
 	preload("res://scenes/levels/level_3.tscn"),
 	preload("res://scenes/levels/blank.tscn")
 ]
 
 var player_start = Vector2(288, 480)
 
-var level = 3;
+var level = 2;
 var start_game = false
 var start_ending = false
 var loading = false;
@@ -28,6 +29,7 @@ func _fixed_process(delta):
 		get_node("player").canMove = false
 		get_node("story").show()
 		get_node("story").show_opening()
+		get_node("edoor").close();
 	if start_ending == true:
 		start_game = true
 		get_node("player").canMove = false
