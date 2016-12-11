@@ -9,7 +9,7 @@ var levels = [
 
 var player_start = Vector2(288, 480)
 
-var level = 0;
+var level = 3;
 var start_game = false
 var start_ending = false
 var loading = false;
@@ -75,6 +75,8 @@ func play_next():
 		if level >= levels.size():
 			get_node("Camera2D").set_zoom(Vector2(0.5,0.5))
 			get_node("Camera2D").set_pos(Vector2(250,550))
+			get_node("player").set_pos(player_start);
+			get_node("player").speed = 0
 			get_node("player").moving = false
 			start_ending = true;
 

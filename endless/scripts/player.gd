@@ -18,6 +18,9 @@ func _ready():
 
 func _fixed_process(delta):
 
+	if not canMove:
+		get_node("AnimationPlayer").play("idle")
+
 	if !moving and canMove:
 		get_node("AnimationPlayer").play("idle")
 

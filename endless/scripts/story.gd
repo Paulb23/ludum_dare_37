@@ -28,9 +28,9 @@ func _fixed_process(delta):
 			get_node("text").set_text("Wait...It can't be!")
 		if ending_part == 1:
 			get_node("text").set_text("No no no no no..")
-		if ending_part == 3:
+		if ending_part == 2:
 			get_node("text").set_text("How did i miss it!")
-		if ending_part == 4:
+		if ending_part == 3:
 			ending_part = 0
 			show_ending = false
 			get_parent().ending_finished()
