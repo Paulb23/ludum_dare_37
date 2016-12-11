@@ -10,6 +10,7 @@ var player_start = Vector2(288, 480)
 
 var level = 0;
 var start_game = false
+var start_ending = false
 var loading = false;
 var playing = true
 
@@ -26,6 +27,15 @@ func _fixed_process(delta):
 		get_node("player").canMove = false
 		get_node("story").show()
 		get_node("story").show_opening()
+	if start_ending == true:
+		start_game = true
+		get_node("player").canMove = false
+		get_node("player").moving = false
+		get_node("story").show()
+		get_node("story").show_ending()
+
+func ending_finished():
+	get_node("/root/globals").set_scene("res://menus/fin.tscn")
 
 func opening_finshed():
 	get_node("story").hide()
@@ -37,6 +47,17 @@ func opening_finshed():
 func load_next():
 	if not loading:
 		level+=1;
+		if level >= levels.size():
+			get_node("door").close();
+			get_node("edoor").open();
+			get_node("the_room/level").free()
+			get_node("the_room").add_child(levels[0].instance())
+			get_node("door").close();
+			get_node("edoor").open();
+			loading = true
+			playing = false
+			return
+
 		get_node("the_room/level").free()
 		get_node("the_room").add_child(levels[level].instance())
 		get_node("door").close();
@@ -49,6 +70,12 @@ func play_next():
 		get_node("edoor").close();
 		loading = false
 		playing = true
+
+		if level >= levels.size():
+			get_node("Camera2D").set_zoom(Vector2(0.5,0.5))
+			get_node("Camera2D").set_pos(Vector2(332.730469,524.029602))
+			get_node("player").moving = false
+			start_ending = true;
 
 func reload():
 	if playing:
